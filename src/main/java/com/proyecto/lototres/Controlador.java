@@ -17,15 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Castellanos
  */
 
-@CrossOrigin(origins = "http://localhost:4200",maxAge = 3600 )
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping({"/actividad"})
+@RequestMapping("/actividad")
 public class Controlador {
     
     @Autowired
     ActividadService service;
     
-    @GetMapping
+    @GetMapping("/getAll")
     public List<Actividad>listar(){
         return service.listar();
     }

@@ -11,8 +11,9 @@ import org.springframework.context.annotation.ComponentScan;
 public class Actividad implements Serializable {
 	 
 	 @Id
-	 @Column (name = "id_act") 
-	 private int id_act;
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+     @Column (name = "id_act")
+	 private Long id_act;
 	 @Column(name = "nombre_act") 
 	 private String nombre_act;
 	 @Column(name = "fecha_act") 
@@ -26,13 +27,13 @@ public class Actividad implements Serializable {
 
     public Actividad() {
     }
-         
 
-    public int getId_act() {
+
+    public Long getId_act() {
         return id_act;
     }
 
-    public void setId_act(int id_act) {
+    public void setId_act(Long id_act) {
         this.id_act = id_act;
     }
 

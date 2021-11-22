@@ -7,6 +7,8 @@ package com.proyecto.lototres;
 
 
 import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.Repository;
 import javax.persistence.Id;
 
@@ -17,9 +19,6 @@ import javax.persistence.Id;
  * @author Castellanos
  */
 
-public interface ActividadRepositorio extends Repository <Actividad, Integer>{
-      public List<Actividad>findAll();
-      public  Actividad findById(int id_act);
-      public  Actividad save (Actividad a);
-      public void deleteById (Actividad a);
+public interface ActividadRepositorio extends JpaRepository <Actividad, Long>{
+
 }
